@@ -1,0 +1,34 @@
+{
+    "name": "Default Controlls",
+    "maps": [
+        {
+            "name": "Default",
+            "id": "bc37c1d7-e809-45cc-8e47-af9e095d09c6",
+            "actions": [
+                {
+                    "name": "Flap",
+                    "type": "Button",
+                    "id": "40474f2b-6e83-47e2-9714-c0a026ab539c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ac240e6a-803b-4969-9bd7-c1d2b767b50f",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Flap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
