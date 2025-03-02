@@ -19,15 +19,12 @@ public class ColorTracker : MonoBehaviour
 
     void Start()
     {
-        InitializeWebCam();
-    }
-
-    // Initialize the WebCamTexture
-    void InitializeWebCam()
-    {
         webcamTexture = new WebCamTexture();
         display.texture = webcamTexture;
         webcamTexture.Play();
+
+        // Mirror the webcam image visually
+        MirrorWebCamImage();
     }
 
     void Update()
@@ -47,7 +44,10 @@ public class ColorTracker : MonoBehaviour
         {
             for (int x = 0; x < width; x++)
             {
-                Color32 pixel = pixels[y * width + x];
+                // Adjust x to account for the mirrored feed
+                int mirroredX = width - x - 1;
+
+                Color32 pixel = pixels[y * width + mirroredX]; // Get the pixel from the mirrored position
                 if (IsColorMatch(pixel, targetColor, threshold))
                 {
                     sumX += x;
@@ -95,32 +95,17 @@ public class ColorTracker : MonoBehaviour
         trackedObject.transform.position = new Vector3(worldPos.x, worldPos.y, trackedObject.transform.position.z);
     }
 
-    // Stop the webcam when the scene is unloaded or the game is stopped
-    void OnDestroy()
+    // Mirror the webcam image horizontally
+    void MirrorWebCamImage()
     {
-        StopWebCam();
-    }
-
-    // Handle application pause or quit, to stop the webcam
-    void OnApplicationPause(bool pauseStatus)
-    {
-        if (pauseStatus)
+        // Flip the RawImage horizontally
+        if (display != null)
         {
-            StopWebCam();
-        }
-        else
-        {
-            // Restart the webcam if the application is resumed (optional)
-            InitializeWebCam();
-        }
-    }
-
-    // Stop the webcam feed
-    void StopWebCam()
-    {
-        if (webcamTexture != null && webcamTexture.isPlaying)
-        {
-            webcamTexture.Stop();
+            RectTransform rt = display.GetComponent<RectTransform>();
+            if (rt != null)
+            {
+                rt.localScale = new Vector3(-1, 1, 1);  // Flip horizontally (mirror effect)
+            }
         }
     }
 }
