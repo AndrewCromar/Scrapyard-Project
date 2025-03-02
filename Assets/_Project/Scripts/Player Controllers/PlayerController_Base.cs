@@ -11,6 +11,11 @@ public class PlayerController_Base : MonoBehaviour
     public int Score = 0;
     private Vector2 LastPosition;
 
+    public void Start()
+    {
+        PlayerPrefs.SetInt("Score", 0);
+    }
+
     public virtual void Update()
     {
         CalculateAngle();
