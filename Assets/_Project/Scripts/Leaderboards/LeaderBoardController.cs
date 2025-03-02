@@ -37,7 +37,7 @@ public class LeaderBoardController : MonoBehaviour
             PlayerPrefs.SetInt("LastScoreSet", latestScore);
 
             // Add the latest score to the leaderboard
-            string playerName = PlayerPrefs.GetString("Name", "Anonymous");
+            string playerName = PlayerPrefs.GetString("Name", "Anonymous") + (PlayerPrefs.GetInt("TwoPlayer") == 1 ? " (2P)" : "") + (PlayerPrefs.GetInt("Hard") == 1 ? " (Hard)" : "");
             yield return StartCoroutine(PostScore(playerName, latestScore));
         }
 

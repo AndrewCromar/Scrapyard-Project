@@ -7,7 +7,7 @@ public class PlayerController_Base : MonoBehaviour
     public GameObject CollectSFXPrefab;
     public float AboluteMaxAngle = 45;
     public float Smoothing = 10f;
-    public float AbsMaxY = 5;
+    public float AbsMaxY = 10;
 
     [Header ("Debug")]
     public int Score = 0;

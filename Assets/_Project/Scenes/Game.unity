@@ -448,7 +448,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -606,6 +606,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 783327199}
+  - component: {fileID: 783327208}
   - component: {fileID: 783327204}
   - component: {fileID: 783327205}
   - component: {fileID: 783327207}
@@ -715,7 +716,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783327196}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e325898be6526ca47b9b0f52e58847bc, type: 3}
   m_Name: 
@@ -723,7 +724,7 @@ MonoBehaviour:
   CollectSFXPrefab: {fileID: 2926817558800108883, guid: 513227107b8f5b8458b01e1ee49d1074, type: 3}
   AboluteMaxAngle: 45
   Smoothing: 10
-  AbsMaxY: 7
+  AbsMaxY: 10
   Score: 0
 --- !u!114 &783327205
 MonoBehaviour:
@@ -732,7 +733,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783327196}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab6af3d8dca70fa45bba224876321ed2, type: 3}
   m_Name: 
@@ -740,12 +741,14 @@ MonoBehaviour:
   CollectSFXPrefab: {fileID: 2926817558800108883, guid: 513227107b8f5b8458b01e1ee49d1074, type: 3}
   AboluteMaxAngle: 45
   Smoothing: 10
-  AbsMaxY: 7
+  AbsMaxY: 10
   Score: 0
   JumpForce: 5
   Gravity: 9.81
   YVelocity: 0
-  VelocityThreshold: 15
+  VelocityThreshold: 20
+  JumpSFXPrefab: {fileID: 781747998643248958, guid: fbf21338c5af4bd44a15a066e2e1eebf, type: 3}
+  SFXCooldownDuration: 0.35
 --- !u!58 &783327206
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -797,8 +800,23 @@ MonoBehaviour:
   CollectSFXPrefab: {fileID: 2926817558800108883, guid: 513227107b8f5b8458b01e1ee49d1074, type: 3}
   AboluteMaxAngle: 45
   Smoothing: 10
-  AbsMaxY: 7
+  AbsMaxY: 10
   Score: 0
+--- !u!114 &783327208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783327196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfaaa84319ae86c44ac672022d3fe091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController_Chuck: {fileID: 783327205}
+  playerController_TrackXY: {fileID: 783327207}
+  playerController_TrackY: {fileID: 783327204}
 --- !u!1 &1117840152
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +845,7 @@ RectTransform:
   m_GameObject: {fileID: 1117840152}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.009259259, y: 0.009259259, z: 0.009259259}
+  m_LocalScale: {x: 0.018518519, y: 0.018518519, z: 0.018518519}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1252042630}
@@ -1455,6 +1473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PipePrefab: {fileID: 1511827314832882465, guid: d786307e51c975c41882689b5b4138a4, type: 3}
   SpawnInterval: 1
+  SpawnInterval2P: 2
   counter: 0
 --- !u!4 &1769820231
 Transform:
@@ -1502,7 +1521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   display: {fileID: 1252042628}
   trackedObject: {fileID: 1803581810}
-  targetColor: {r: 0.78431374, g: 0.8, b: 0.24313726, a: 1}
+  targetColor: {r: 0.7254902, g: 0.7137255, b: 0.19607843, a: 1}
   threshold: 50
   position: {x: 0, y: 0}
   worldPosition: {x: 0, y: 0}

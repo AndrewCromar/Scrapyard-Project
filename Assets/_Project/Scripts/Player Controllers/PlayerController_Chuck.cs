@@ -8,7 +8,9 @@ public class PlayerController_Chuck : PlayerController_Base
     public float YVelocity;
     public float VelocityThreshold = 5;
     private Vector2 LastPosition;
-    // public GameObject JumpSFXPrefab;
+    public GameObject JumpSFXPrefab;
+    public float SFXCooldownDuration = 0.1f;
+    private float SFXCooldown = 0;
 
 
     public override void Update()
@@ -19,10 +21,16 @@ public class PlayerController_Chuck : PlayerController_Base
 
         float currentXVelocity = (currentPosition.x - LastPosition.x) / Time.deltaTime;
 
+        SFXCooldown -= Time.deltaTime;
+
         if (Mathf.Abs(currentXVelocity) > VelocityThreshold)
         {
             YVelocity = JumpForce;
-            // Instantiate(JumpSFXPrefab, Vector2.zero, Quaternion.identity);
+
+            if(SFXCooldown <= 0){
+                SFXCooldown = SFXCooldownDuration;
+                Instantiate(JumpSFXPrefab, Vector2.zero, Quaternion.identity);
+            }
         }
 
         LastPosition = currentPosition;
