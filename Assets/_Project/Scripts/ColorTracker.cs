@@ -29,7 +29,8 @@ public class ColorTracker : MonoBehaviour
 
     void Update()
     {
-        if (webcamTexture.width < 100) return; // Avoid processing before the webcam is ready
+        // Check if the webcam is playing before processing
+        if (webcamTexture == null || !webcamTexture.isPlaying || webcamTexture.width < 100) return;
 
         Color32[] pixels = webcamTexture.GetPixels32();
         int width = webcamTexture.width;
@@ -106,6 +107,16 @@ public class ColorTracker : MonoBehaviour
             {
                 rt.localScale = new Vector3(-1, 1, 1);  // Flip horizontally (mirror effect)
             }
+        }
+    }
+
+    // Terminate the webcam
+    public void TerminateWebcam()
+    {
+        if (webcamTexture != null && webcamTexture.isPlaying)
+        {
+            webcamTexture.Stop();
+            webcamTexture = null;
         }
     }
 }

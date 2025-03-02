@@ -36,6 +36,7 @@ public class PlayerController_Base : MonoBehaviour
 
         if (collision.gameObject.CompareTag("pipe"))
         {
+            ColorTracker.Instance.TerminateWebcam();
             SceneManager.LoadScene(2);
         }
     }
