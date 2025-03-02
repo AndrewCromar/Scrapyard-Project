@@ -1,16 +1,15 @@
 unity version: 6000.0.25f1
 
-# Flappy Tennis!!!
-<br>
+<hr>
 
-The most annoying way to play Flappy Bird, chuck a physical tennis ball 🎾 and how high it goes, thats how high orpheus moves! Chuck it too slow and well... byebye orpheus 😔
-<br>
-<img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/8ea8a2e937c8cd8dfd1f9772dc8aba4ffd92141c_image.psd_1_.png" width="100" />
-<br>
+![FLAPPY TENNISSSSSS](https://hc-cdn.hel1.your-objectstorage.com/s/v3/84de1a49e8a6f409e471d2da5b0086d65dbddc44_image.png)
 
 
-Created for The [Scrapyard Flagship](https://scrapyard.hackclub.com/) at Austin, Texas 
+<hr>
 
-By: [Andrew](https://github.com/AndrewCromar), [Brody](https://x.com/brodylame), and [Riley](https://github.com/RileyBautista)
+Flappy Tennis, created at the [Scrapyard Flagship in Austin, Texas](https://scrapyard.hackclub.com/) !!!! <br><br>
+The <b>most</b> annoying way to play Flappy Bird, move or flick a physical tennis ball 🎾 and how high it goes, thats how high Orpheus <img src="https://hackclub.com/stickers/orphmoji_yippee.png" height=20> moves! Chuck it too slow and well... byebye Orpheus <img src="https://hackclub.com/stickers/orphmoji_scared.png" height=20>
 
-[Website Repo](https://github.com/RileyBautista/FlappyTennis)
+[Web Source Here!](https://github.com/RileyBautista/FlappyTennis/)
+
+Created by [Andrew](https://github.com/AndrewCromar), [Brody](https://x.com/brodylame), and [Riley!](https://github.com/RileyBautista)
