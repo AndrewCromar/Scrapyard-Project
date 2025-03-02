@@ -7,6 +7,6 @@ public class LeaderboardEntry : MonoBehaviour
 
     public void SetEntry(string name, int score)
     {
-        _Text.text = name + " - " + score.ToString();
+        _Text.text = name + ": " + score.ToString();
     }
 }
