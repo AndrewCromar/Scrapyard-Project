@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   display: {fileID: 103597776}
   trackedObject: {fileID: 646369618}
-  targetColor: {r: 0.99607843, g: 1, b: 0.29411766, a: 1}
+  targetColor: {r: 0.78431374, g: 0.8, b: 0.24313726, a: 1}
   threshold: 50
   position: {x: 0, y: 0}
   worldPosition: {x: 0, y: 0}
