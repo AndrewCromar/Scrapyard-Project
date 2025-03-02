@@ -28,35 +28,21 @@ public class LeaderBoardController : MonoBehaviour
 
     IEnumerator CheckAndSubmitScore()
     {
-        // Get the player's personal best from PlayerPrefs
-        int personalBest = PlayerPrefs.GetInt("PersonalBest", 0);
+        // Get the latest score from PlayerPrefs
+        if (PlayerPrefs.HasKey("Score"))
+        {
+            int latestScore = PlayerPrefs.GetInt("Score");
+            if(latestScore == PlayerPrefs.GetInt("LastScoreSet")) yield return 0;
+
+            PlayerPrefs.SetInt("LastScoreSet", latestScore);
+
+            // Add the latest score to the leaderboard
+            string playerName = PlayerPrefs.GetString("Name", "Anonymous");
+            yield return StartCoroutine(PostScore(playerName, latestScore));
+        }
 
         // Get the top scores from the leaderboard
         yield return StartCoroutine(GetTopScores());
-
-        // Check if the player's personal best is higher than the current highest score
-        if (personalBest > GetHighestScore())
-        {
-            // Add the personal best to the leaderboard
-            string playerName = PlayerPrefs.GetString("Name", "Anonymous");
-            yield return StartCoroutine(PostScore(playerName, personalBest));
-
-            // Get the top scores again after posting the new score
-            yield return StartCoroutine(GetTopScores());
-        }
-    }
-
-    int GetHighestScore()
-    {
-        // Get the top scores from the leaderboard
-        List<ScoreData> scores = JsonUtility.FromJson<ScoreList>("{\"scores\":" + PlayerPrefs.GetString("LeaderboardData", "[]") + "}").scores;
-
-        // Return the highest score
-        if (scores.Count > 0)
-        {
-            return scores[0].score;
-        }
-        return 0;
     }
 
     void AddScoreToLeaderboard(string name, int score)

@@ -8,10 +8,10 @@ public class PipeSpawner : MonoBehaviour
 
     void Update()
     {
-        SpawnInterval -= Time.deltaTime;
-        if(SpawnInterval <= 0)
+        counter -= Time.deltaTime;
+        if(counter <= 0)
         {
-            SpawnInterval = 1;
+            counter = SpawnInterval;
             GameObject pipe = Instantiate(PipePrefab);
             pipe.transform.position = new Vector3(10, Random.Range(-3, 3), 0);
         }

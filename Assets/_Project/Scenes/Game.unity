@@ -217,7 +217,6 @@ GameObject:
   - component: {fileID: 278934549}
   - component: {fileID: 278934552}
   - component: {fileID: 278934551}
-  - component: {fileID: 278934550}
   m_Layer: 5
   m_Name: Instructions
   m_TagString: Untagged
@@ -244,18 +243,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &278934550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278934548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d50b003a4745e24783e202b1b895ce2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &278934551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,6 +608,7 @@ GameObject:
   - component: {fileID: 783327199}
   - component: {fileID: 783327204}
   - component: {fileID: 783327205}
+  - component: {fileID: 783327207}
   - component: {fileID: 783327197}
   - component: {fileID: 783327201}
   - component: {fileID: 783327206}
@@ -732,8 +720,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e325898be6526ca47b9b0f52e58847bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollectSFXPrefab: {fileID: 2926817558800108883, guid: 513227107b8f5b8458b01e1ee49d1074, type: 3}
   AboluteMaxAngle: 45
   Smoothing: 10
+  AbsMaxY: 5
   Score: 0
 --- !u!114 &783327205
 MonoBehaviour:
@@ -747,13 +737,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6af3d8dca70fa45bba224876321ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollectSFXPrefab: {fileID: 2926817558800108883, guid: 513227107b8f5b8458b01e1ee49d1074, type: 3}
   AboluteMaxAngle: 45
   Smoothing: 10
+  AbsMaxY: 5
   Score: 0
   JumpForce: 5
   Gravity: 9.81
   YVelocity: 0
-  VelocityThreshold: 10
+  VelocityThreshold: 15
+  JumpSFXPrefab: {fileID: 781747998643248958, guid: fbf21338c5af4bd44a15a066e2e1eebf, type: 3}
 --- !u!58 &783327206
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -790,6 +783,23 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.7
+--- !u!114 &783327207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783327196}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54712148d3c738345b558dacb2d6d73d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollectSFXPrefab: {fileID: 2926817558800108883, guid: 513227107b8f5b8458b01e1ee49d1074, type: 3}
+  AboluteMaxAngle: 45
+  Smoothing: 10
+  AbsMaxY: 5
+  Score: 0
 --- !u!1 &1117840152
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,10 +971,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

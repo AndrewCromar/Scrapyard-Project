@@ -8,6 +8,8 @@ public class PlayerController_Chuck : PlayerController_Base
     public float YVelocity;
     public float VelocityThreshold = 5;
     private Vector2 LastPosition;
+    // public GameObject JumpSFXPrefab;
+
 
     public override void Update()
     {
@@ -20,6 +22,7 @@ public class PlayerController_Chuck : PlayerController_Base
         if (Mathf.Abs(currentXVelocity) > VelocityThreshold)
         {
             YVelocity = JumpForce;
+            // Instantiate(JumpSFXPrefab, Vector2.zero, Quaternion.identity);
         }
 
         LastPosition = currentPosition;
