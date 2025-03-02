@@ -1,9 +1,9 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class LeaderboardEntry : MonoBehaviour
 {
-    public Text _Text;
+    public TMP_Text _Text;
 
     public void SetEntry(string name, int score)
     {

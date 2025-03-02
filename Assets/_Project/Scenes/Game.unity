@@ -723,7 +723,7 @@ MonoBehaviour:
   CollectSFXPrefab: {fileID: 2926817558800108883, guid: 513227107b8f5b8458b01e1ee49d1074, type: 3}
   AboluteMaxAngle: 45
   Smoothing: 10
-  AbsMaxY: 5
+  AbsMaxY: 7
   Score: 0
 --- !u!114 &783327205
 MonoBehaviour:
@@ -740,13 +740,12 @@ MonoBehaviour:
   CollectSFXPrefab: {fileID: 2926817558800108883, guid: 513227107b8f5b8458b01e1ee49d1074, type: 3}
   AboluteMaxAngle: 45
   Smoothing: 10
-  AbsMaxY: 5
+  AbsMaxY: 7
   Score: 0
   JumpForce: 5
   Gravity: 9.81
   YVelocity: 0
   VelocityThreshold: 15
-  JumpSFXPrefab: {fileID: 781747998643248958, guid: fbf21338c5af4bd44a15a066e2e1eebf, type: 3}
 --- !u!58 &783327206
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -798,7 +797,7 @@ MonoBehaviour:
   CollectSFXPrefab: {fileID: 2926817558800108883, guid: 513227107b8f5b8458b01e1ee49d1074, type: 3}
   AboluteMaxAngle: 45
   Smoothing: 10
-  AbsMaxY: 5
+  AbsMaxY: 7
   Score: 0
 --- !u!1 &1117840152
 GameObject:
