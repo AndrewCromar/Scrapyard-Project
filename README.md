@@ -11,6 +11,6 @@ The most annoying way to play Flappy Bird, chuck a physical tennis ball 🎾 and
 
 Created for The [Scrapyard Flagship](https://scrapyard.hackclub.com/) at Austin, Texas 
 
-By: [Andrew](https://github.com/AndrewCromar), [Brody](https://github.com/m3kko), and [Riley](https://github.com/RileyBautista)
+By: [Andrew](https://github.com/AndrewCromar), [Brody](https://x.com/brodylame), and [Riley](https://github.com/RileyBautista)
 
 
