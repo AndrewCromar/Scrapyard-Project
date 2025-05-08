@@ -1521,7 +1521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   display: {fileID: 1252042628}
   trackedObject: {fileID: 1803581810}
-  targetColor: {r: 0.7254902, g: 0.7137255, b: 0.19607843, a: 1}
+  targetColor: {r: 0.83137256, g: 0.7764706, b: 0.21960784, a: 1}
   threshold: 50
   position: {x: 0, y: 0}
   worldPosition: {x: 0, y: 0}
